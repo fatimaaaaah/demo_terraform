@@ -29,9 +29,10 @@ pipeline {
 
         stage('Validate AWS Credentials') {
             steps {
-                bat 'aws sts get-caller-identity'
+                bat '"C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe" sts get-caller-identity'
             }
         }
+
             stage('Terraform Init') {
             steps {
                 bat 'terraform init'
